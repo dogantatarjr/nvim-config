@@ -45,6 +45,8 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"
     use "windwp/nvim-autopairs"
     use "numToStr/Comment.nvim"
+    use "nvim-tree/nvim-web-devicons"
+    use "nvim-tree/nvim-tree.lua"
 
     -- Colorschemes
     use "folke/tokyonight.nvim"

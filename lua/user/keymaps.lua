@@ -11,7 +11,6 @@ k("n", "<C-j>", "<C-w>j", o)
 k("n", "<C-k>", "<C-w>k", o)
 k("n", "<C-l>", "<C-w>l", o)
 
-k("n", "<leader>e", ":Lex 30<CR>", o)
 -- Resizing --
 k("n", "<C-Up>", ":resize +2<CR>", o)
 k("n", "<C-Down>", ":resize -2<CR>", o)
@@ -52,3 +51,6 @@ k("t", "<C-l>", "<C-\\><C-N><C-w>l", to)
 -- Telescope --
 k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", o)
 k("n", "<c-t>", "<cmd>Telescope live_grep<cr>", o)
+
+-- Nvim Tree --
+k("n", "<leader>e", ":NvimTreeToggle<CR>", o)
