@@ -1,5 +1,4 @@
 local o = { noremap = true, silent = true }
-local to = {silent = true}
 local k = vim.keymap.set
 k("", "<Space>", "<Nop>", o)
 vim.g.mapleader = " "
@@ -40,17 +39,3 @@ k("x", "J", ":move '>+1<CR>gv-gv", o)
 k("x", "K", ":move '<-2<CR>gv-gv", o)
 k("x", "<A-j>", ":move '>+1<CR>gv-gv", o)
 k("x", "<A-k>", ":move '<-2<CR>gv-gv", o)
-
--- Terminal --
--- Better terminal navigation
-k("t", "<C-h>", "<C-\\><C-N><C-w>h", to)
-k("t", "<C-j>", "<C-\\><C-N><C-w>j", to)
-k("t", "<C-k>", "<C-\\><C-N><C-w>k", to)
-k("t", "<C-l>", "<C-\\><C-N><C-w>l", to)
-
--- Telescope --
-k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", o)
-k("n", "<c-t>", "<cmd>Telescope live_grep<cr>", o)
-
--- Nvim Tree --
-k("n", "<leader>e", ":NvimTreeToggle<CR>", o)
