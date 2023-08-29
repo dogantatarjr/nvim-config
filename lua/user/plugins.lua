@@ -17,7 +17,7 @@ if not status_ok then
 end
 -- Install plugins here --
 lazy.setup({
-	"wbthomason/packer.nvim",
+	"folke/lazy.nvim"
 	"nvim-lua/plenary.nvim",
 	"nvim-lua/popup.nvim",
 	"windwp/nvim-autopairs",
