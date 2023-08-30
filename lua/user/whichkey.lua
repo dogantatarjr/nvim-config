@@ -97,13 +97,16 @@ local mappings = {
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
     ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree"},
 
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
+	l = {
+		name = "Lazy",
+		r = { "<cmd>Lazy<Space>restore<cr>", "Restore" },
+		i = { "<cmd>Lazy<Space>install<cr>", "Install" },
+		l = { "<cmd>Lazy<Space>load<cr>", "Load" },
+		u = { "<cmd>Lazy<Space>update<cr>", "Update" },
+		p = { "<cmd>Lazy<Space>profile<cr>", "Profile" },
+		h = { "<cmd>Lazy<Space>help<cr>", "Help" },
+		s = { "<cmd>Lazy<Space>show<cr>", "Show" },
+		c = { "<cmd>Lazy<Space>clean<cr>", "Clean" },
 	},
 
 	g = {
@@ -129,7 +132,7 @@ local mappings = {
 		},
 	},
 
-	l = {
+	L = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		d = {
