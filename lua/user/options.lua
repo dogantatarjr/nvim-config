@@ -47,7 +47,12 @@ vim.cmd([[
 ]])
 
 local plugin_options = {
+    -- Suda
 	suda_smart_edit = 1,
+
+    -- Markdown Prewiev
+    mkdp_auto_start = 1,
+    mkdp_theme = "dark",
 }
 
 for k, v in pairs(plugin_options) do
