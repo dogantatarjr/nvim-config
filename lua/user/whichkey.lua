@@ -95,7 +95,7 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
-    ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree"},
+	["U"] = { "<cmd>UndotreeToggle<CR>", "Undotree" },
 
 	l = {
 		name = "Lazy",
@@ -143,7 +143,7 @@ local mappings = {
 			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+		f = { "<cmd>Format<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
@@ -184,6 +184,21 @@ local mappings = {
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+	},
+
+	u = {
+		name = "Ufo",
+		R = { "<cmd>lua require('ufo').openAllFolds()<CR>", "Open All Folds" },
+		M = { "<cmd>lua require('ufo').closeAllFolds()<CR>", "Close All Folds" },
+		c = { "<cmd>foldclose<CR>", "Close Current Fold" },
+		o = { "<cmd>foldopen<CR>", "Open Current Fold" },
+	},
+
+	C = {
+		name = "CPHelper",
+		r = { "<cmd>CphReceive<CR>", "CphReceive" },
+		t = { "<cmd>CphTest<CR>", "CphTest" },
+		R = { "<cmd>CphRetest<CR>", "CphRetest" },
 	},
 }
 

@@ -5,7 +5,7 @@ end
 
 local ascii_status_ok, ascii = pcall(require, "ascii")
 if not ascii_status_ok then
-    return
+	return
 end
 
 local dashboard = require("alpha.themes.dashboard")

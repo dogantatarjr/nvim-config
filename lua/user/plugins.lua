@@ -1,19 +1,19 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 local status_ok, lazy = pcall(require, "lazy")
 if not status_ok then
-    return
+	return
 end
 -- Install plugins here --
 lazy.setup({
@@ -31,14 +31,18 @@ lazy.setup({
 	"lukas-reineke/indent-blankline.nvim",
 	"goolord/alpha-nvim",
 	"antoinemadec/FixCursorHold.nvim",
-    "folke/which-key.nvim",
-    "lambdalisue/suda.vim",
-    "MaximilianLloyd/ascii.nvim",
-    "MunifTanjim/nui.nvim",
-    "lewis6991/impatient.nvim",
-    "ahmedkhalf/project.nvim",
-    "mbbill/undotree",
-    "karb94/neoscroll.nvim",
+	"folke/which-key.nvim",
+	"lambdalisue/suda.vim",
+	"MaximilianLloyd/ascii.nvim",
+	"MunifTanjim/nui.nvim",
+	"lewis6991/impatient.nvim",
+	"ahmedkhalf/project.nvim",
+	"mbbill/undotree",
+	"karb94/neoscroll.nvim",
+	{ "kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async" },
+	"petertriho/nvim-scrollbar",
+	"f-person/auto-dark-mode.nvim",
+	"p00f/cphelper.nvim",
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",
@@ -59,24 +63,26 @@ lazy.setup({
 	"neovim/nvim-lspconfig",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
+	"elentok/format-on-save.nvim",
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
 	"nvim-telescope/telescope-media-files.nvim",
 
 	-- Treesitter
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"p00f/nvim-ts-rainbow",
 	"nvim-treesitter/playground",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 
 	-- Git
 	"lewis6991/gitsigns.nvim",
-    {
-        "iamcco/markdown-preview.nvim",
-        build = "cd app && npm install",
-        init = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" },
-    },
+	{
+		"iamcco/markdown-preview.nvim",
+		build = "cd app && npm install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
 })

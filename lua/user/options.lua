@@ -32,6 +32,7 @@ local options = {
 	guifont = "monospace:17",
 	showmode = false,
     colorcolumn = "80",
+    foldmethod = "manual",
 }
 
 for k, v in pairs(options) do
