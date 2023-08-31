@@ -9,7 +9,7 @@ themery.setup({
 		"tokyonight-moon",
 		"gruvbox-material",
 		"everforest",
-		"oxycarbon",
+		"oxocarbon",
 		"nord",
 	},
 	themeConfigFile = "~/.config/nvim/lua/user/colorscheme.lua", -- Described below
@@ -17,5 +17,5 @@ themery.setup({
 })
 -- Themery block
 -- This block will be replaced by Themery.
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme tokyonight-moon")
 -- end themery block
