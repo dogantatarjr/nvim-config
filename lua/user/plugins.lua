@@ -43,9 +43,16 @@ lazy.setup({
 	"petertriho/nvim-scrollbar",
 	"f-person/auto-dark-mode.nvim",
 	"p00f/cphelper.nvim",
+	"zaldih/themery.nvim",
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",
+	"rebelot/kanagawa.nvim",
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	"sainnhe/gruvbox-material",
+	"sainnhe/everforest",
+	"nyoom-engineering/oxocarbon.nvim",
+	"shaunsingh/nord.nvim",
 
 	-- CMP stuff
 	"hrsh7th/nvim-cmp",
@@ -64,6 +71,7 @@ lazy.setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"elentok/format-on-save.nvim",
+	{ "folke/neodev.nvim", opts = {} },
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
