@@ -33,6 +33,7 @@ local options = {
 	showmode = false,
     colorcolumn = "80",
     foldmethod = "manual",
+    visualbell = true,
 }
 
 for k, v in pairs(options) do
