@@ -44,6 +44,17 @@ lazy.setup({
 	"f-person/auto-dark-mode.nvim",
 	"p00f/cphelper.nvim",
 	"zaldih/themery.nvim",
+	{
+		"folke/zen-mode.nvim",
+		opts = {
+			plugins = {
+				kitty = {
+					enabled = true,
+					font = "+4",
+				},
+			},
+		},
+	},
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",

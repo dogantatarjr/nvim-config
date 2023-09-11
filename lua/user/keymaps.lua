@@ -39,3 +39,6 @@ k("x", "J", ":move '>+1<CR>gv-gv", o)
 k("x", "K", ":move '<-2<CR>gv-gv", o)
 k("x", "<A-j>", ":move '>+1<CR>gv-gv", o)
 k("x", "<A-k>", ":move '<-2<CR>gv-gv", o)
+
+-- LSP
+k("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", o)

@@ -38,6 +38,9 @@ format_on_save.setup({
 		cpp = formatters.shell({
 			cmd = { "clang-format", '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4}"', "%" },
 		}),
+		c = formatters.shell({
+			cmd = { "clang-format", '--style="{BasedOnStyle: google, IndentWidth: 4, TabWidth: 4}"', "%" },
+		}),
 
 		-- Add custom formatter
 		filetype1 = formatters.remove_trailing_whitespace,
@@ -81,6 +84,10 @@ format_on_save.setup({
 vim.cmd([[
 augroup FormatAutogroup
     autocmd!
-    autocmd BufWritePost * Format
+    autocmd BufWritePost *.cpp Format
+    autocmd BufWritePost *.c Format
+    autocmd BufWritePost *.lua Format
+    autocmd BufWritePost *.sh Format
+    autocmd BufWritePost *.py Format
 augroup END
 ]])

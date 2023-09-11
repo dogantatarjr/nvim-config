@@ -31,9 +31,9 @@ local options = {
 	sidescrolloff = 8,
 	guifont = "monospace:17",
 	showmode = false,
-    colorcolumn = "80",
-    foldmethod = "manual",
-    visualbell = true,
+	colorcolumn = "80",
+	foldmethod = "manual",
+	visualbell = true,
 }
 
 for k, v in pairs(options) do
@@ -49,12 +49,15 @@ vim.cmd([[
 ]])
 
 local plugin_options = {
-    -- Suda
+	-- Suda
 	suda_smart_edit = 1,
 
-    -- Markdown Prewiev
-    mkdp_auto_start = 1,
-    mkdp_theme = "dark",
+	-- Markdown Prewiev
+	mkdp_auto_start = 1,
+	mkdp_theme = "dark",
+
+	-- Everforest BG
+	everforest_background = "hard",
 }
 
 for k, v in pairs(plugin_options) do
