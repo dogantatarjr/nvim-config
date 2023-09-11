@@ -49,6 +49,7 @@ NVIM_APPNAME=ahmetemregurdal/nvim-config/ nvim
 + [hrsh7th/nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)
 ### editing-support
 
++ [folke/zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)
 + [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 ### formatting
 
@@ -115,6 +116,7 @@ NVIM_APPNAME=ahmetemregurdal/nvim-config/ nvim
 + bashls
 + clangd
 + efm
++ gopls
 + lua_ls
 + pyright
 + tsserver
