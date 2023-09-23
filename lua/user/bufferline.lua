@@ -57,6 +57,7 @@ bufferline.setup {
             { filetype = "NvimTree", text = "NvimTree", padding = 1 },
             { filetype = "undotree", text = "UndoTree", padding = 1},
             { filetypr = "diff", text = "", padding = 1},
+            { filetypr = "alpha", text = "", padding = 1},
         },
         show_buffer_icons = true,
         show_buffer_close_icons = true,

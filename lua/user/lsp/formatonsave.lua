@@ -80,14 +80,3 @@ format_on_save.setup({
 	-- To prevent that set `run_with_sh` to `false`.
 	run_with_sh = false,
 })
-
-vim.cmd([[
-augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost *.cpp Format
-    autocmd BufWritePost *.c Format
-    autocmd BufWritePost *.lua Format
-    autocmd BufWritePost *.sh Format
-    autocmd BufWritePost *.py Format
-augroup END
-]])
