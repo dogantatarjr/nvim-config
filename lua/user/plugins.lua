@@ -55,6 +55,7 @@ lazy.setup({
 			},
 		},
 	},
+    "m4xshen/hardtime.nvim",
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",
