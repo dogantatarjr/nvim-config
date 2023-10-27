@@ -1,5 +1,6 @@
 local status_ok, format_on_save = pcall(require, "format-on-save")
 if not status_ok then
+    print("formatonsave.lua")
 	return
 end
 local formatters_status_ok, formatters = pcall(require, "format-on-save.formatters")

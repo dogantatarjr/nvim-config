@@ -3,6 +3,7 @@
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
+    print("nvim-tree.lua")
     return
 end
 
@@ -37,7 +38,6 @@ nvim_tree.setup {
     },
     view = {
         width = 30,
-        hide_root_folder = false,
         side = "left",
         number = false,
         relativenumber = false,

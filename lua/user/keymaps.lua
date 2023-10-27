@@ -42,3 +42,18 @@ k("x", "<A-k>", ":move '<-2<CR>gv-gv", o)
 
 -- LSP
 k("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", o)
+
+k("n", "<F5>", function ()
+    if(vim.bo.filetype == "python") then
+        vim.cmd(':TermExec cmd="python3 %:p" direction=float')
+    elseif(vim.bo.filetype == "cpp") then
+        vim.cmd(':!g++ -O3 %:p -o /tmp/vim-autorun.out')
+        vim.cmd(":TermExec cmd='/tmp/vim-autorun.out' direction=float")
+    elseif(vim.bo.filetype == "c") then
+        vim.cmd(":!gcc -O3 %:p -o /tmp/vim-autorun.out")
+        vim.cmd(":TermExec cmd='/tmp/vim-autorun.out' direction=float")
+    elseif(vim.bo.filetype == "sh") then
+        vim.cmd(':TermExec cmd="bash %:p" direction=float')
+    end
+end
+)

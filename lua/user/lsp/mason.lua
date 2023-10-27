@@ -3,6 +3,9 @@ local servers = {
 	"clangd",
 	"lua_ls",
 	"bashls",
+    "tsserver",
+    "jsonls",
+    "html",
 }
 
 local settings = {

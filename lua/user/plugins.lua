@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local status_ok, lazy = pcall(require, "lazy")
 if not status_ok then
+    print("plugins.lua")
 	return
 end
 -- Install plugins here --
@@ -26,6 +27,7 @@ lazy.setup({
 	"nvim-tree/nvim-tree.lua",
 	"akinsho/bufferline.nvim",
 	"moll/vim-bbye",
+    {"turbio/bracey.vim", build = "npm install --prefix server"},
 	"akinsho/toggleterm.nvim",
 	"nvim-lualine/lualine.nvim",
 	"lukas-reineke/indent-blankline.nvim",
@@ -41,8 +43,8 @@ lazy.setup({
 	"karb94/neoscroll.nvim",
 	{ "kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async" },
 	"petertriho/nvim-scrollbar",
-	"f-person/auto-dark-mode.nvim",
 	"p00f/cphelper.nvim",
+    "chrisbra/Colorizer",
 	"zaldih/themery.nvim",
 	{
 		"folke/zen-mode.nvim",
@@ -55,7 +57,6 @@ lazy.setup({
 			},
 		},
 	},
-    "m4xshen/hardtime.nvim",
 
 	-- Colorschemes
 	"folke/tokyonight.nvim",
@@ -94,6 +95,8 @@ lazy.setup({
 	"p00f/nvim-ts-rainbow",
 	"nvim-treesitter/playground",
 	"JoosepAlviste/nvim-ts-context-commentstring",
+    "DaeZak/crafttweaker-vim-highlighting",
+    "luckasRanarison/tree-sitter-hypr",
 
 	-- Git
 	"lewis6991/gitsigns.nvim",
@@ -103,6 +106,6 @@ lazy.setup({
 		init = function()
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
-		ft = { "markdown" },
+		ft = { "markdown"},
 	},
 })
